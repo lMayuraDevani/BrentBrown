@@ -1,0 +1,10 @@
+package credentials;
+
+public class commons {
+
+//	public static final String URL_FOR_WEBSERVICE="http://192.168.200.74/DealerAPI/api/vehicles/SearchVehicles" ;
+	
+	public static final String URL_FOR_WEBSERVICE="http://dealersiteapi.qc.socialcrm360.com/api/.....so" ;
+	
+	
+}

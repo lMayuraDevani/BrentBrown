@@ -1,0 +1,21 @@
+package com.interactive360.brentbrown;
+
+import com.google.android.gms.maps.MapView;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.widget.LinearLayout;
+
+public class FindMyCarActivity extends Activity{
+
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		 setContentView(R.layout.add_my_car);
+		 
+		 MapView mapView = (MapView) findViewById(R.id.mapView);
+		 
+		 
+	}
+}

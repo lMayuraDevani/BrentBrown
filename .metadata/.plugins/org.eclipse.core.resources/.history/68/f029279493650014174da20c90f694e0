@@ -1,0 +1,63 @@
+package adapter;
+
+import com.interactive360.brentbrown.R;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
+
+public class VehicleListAdapter extends BaseAdapter {
+
+	Context context;
+	Boolean isGarage;
+
+	public VehicleListAdapter(Context context, Boolean isGarage) {
+		// TODO Auto-generated constructor stub
+		this.context = context;
+		this.isGarage = isGarage;
+	}
+
+	@Override
+	public int getCount() {
+		// TODO Auto-generated method stub
+		return 10;
+	}
+
+	@Override
+	public Object getItem(int arg0) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public long getItemId(int arg0) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public View getView(int arg0, View convertView, ViewGroup parent) {
+		// TODO Auto-generated method stub
+		View rowView = convertView;
+
+		// reuse views
+		if (rowView == null) {
+			LayoutInflater inflater = (LayoutInflater) context
+					.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+			rowView = inflater.inflate(R.layout.vehicle_list_item, null);
+			if(isGarage)
+			{
+				LinearLayout lldisplayforshowroom = (LinearLayout)rowView.findViewById(R.id.displayforshowroom);
+				lldisplayforshowroom.setVisibility(View.GONE);
+			}
+			// configure view holder
+
+		}
+
+		return rowView;
+	}
+
+}

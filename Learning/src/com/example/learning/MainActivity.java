@@ -1,0 +1,75 @@
+package com.example.learning;
+
+import java.util.Locale;
+
+import utility.ActivityBase;
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v4.widget.SwipeRefreshLayout.OnRefreshListener;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.widget.AbsListView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+public class MainActivity extends ActionBarActivity {
+	 
+	 SwipeRefreshLayout swipeRefreshLayout;
+	 TextView textInfo;
+
+	 @Override
+	 protected void onCreate(Bundle savedInstanceState) {
+	  super.onCreate(savedInstanceState);
+	  setContentView(R.layout.activity_main);
+	  final SwipeRefreshLayout swipeView = (SwipeRefreshLayout) findViewById(R.id.swipelayout);
+	  
+	    swipeView.setEnabled(false);
+	    ListView lView = (ListView) findViewById(R.id.list);
+	    ArrayAdapter<String> adp = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, createItems(40,0 ));
+	    lView.setAdapter(adp);
+	 
+	    swipeView.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+	        @Override
+	        public void onRefresh() {
+	            swipeView.setRefreshing(true);
+	            ( new Handler()).postDelayed(new Runnable() {
+	                @Override
+	                public void run() {
+	                    swipeView.setRefreshing(false);
+	 
+	                }
+	            }, 3000);
+	        }
+	    });
+	 
+	    lView.setOnScrollListener(new AbsListView.OnScrollListener() {
+	        @Override
+	        public void onScrollStateChanged(AbsListView absListView, int i) {
+	 
+	        }
+	 
+	        @Override
+	        public void onScroll(AbsListView absListView, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
+	                if (firstVisibleItem == 0)
+	                    swipeView.setEnabled(true);
+	                else
+	                    swipeView.setEnabled(false);
+	        }
+	    });
+	}
+
+	private String[] createItems(int i, int j) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	 
+}

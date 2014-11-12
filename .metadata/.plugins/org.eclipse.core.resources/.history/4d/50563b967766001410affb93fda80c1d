@@ -1,0 +1,49 @@
+package com.interactive360.brentbrown;
+
+import java.util.List;
+
+import adapter.VehicleListAdapter;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+
+public class GarageFragmentDetail extends Fragment implements OnClickListener {
+
+	LinearLayout llServiceHistory;
+	
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		// return super.onCreateView(inflater, container, savedInstanceState);
+
+		View rootView = inflater.inflate(R.layout.fragment_garage_detail,
+				container, false);
+
+		llServiceHistory = (LinearLayout)rootView.findViewById(R.id.llServiceHistory);
+		llServiceHistory.setOnClickListener(this);
+		return rootView;
+	}
+
+	@Override
+	public void onClick(View v) {
+
+		if(v==llServiceHistory)
+		{
+			Log.e("TAG","Clicked Service");
+			Intent nextAct = new Intent(getActivity(), ServiceAppointmentMessageActivity.class);
+			startActivity(nextAct);
+		}
+		
+	}
+
+}

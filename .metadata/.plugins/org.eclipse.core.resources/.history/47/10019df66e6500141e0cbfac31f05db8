@@ -1,0 +1,130 @@
+package com.example.learning;
+
+import java.util.Locale;
+
+import com.interactive360.brentbrown.GarageFragment;
+import com.interactive360.brentbrown.R;
+import com.interactive360.brentbrown.ShowroomFragment;
+import com.interactive360.brentbrown.SpecialsFragment;
+import com.interactive360.brentbrown.ToolsFragment;
+import com.interactive360.brentbrown.HomeScreen.PlaceholderFragment;
+import com.interactive360.brentbrown.HomeScreen.SectionsPagerAdapter;
+
+import utility.ActivityBase;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBar.Tab;
+import android.support.v7.app.ActionBarActivity;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+
+public class MainActivity extends ActivityBase implements ActionBar.TabListener{
+	public DrawerLayout mSearchDrawLayout;
+	
+	SectionsPagerAdapter mSectionsPagerAdapter;
+
+	ViewPager mViewPager;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+	}
+
+
+	@Override
+	public void onTabSelected(ActionBar.Tab tab,
+			FragmentTransaction fragmentTransaction) {
+
+		// To Hide and Show Search Bar
+		invalidateOptionsMenu();
+
+		// To close search Drawer when moving to other tabs
+		if (mSearchDrawLayout != null) {
+			mSearchDrawLayout.closeDrawers();
+		}
+
+		mViewPager.setCurrentItem(tab.getPosition());
+	}
+
+	@Override
+	public void onTabUnselected(ActionBar.Tab tab,
+			FragmentTransaction fragmentTransaction) {
+	}
+
+	@Override
+	public void onTabReselected(ActionBar.Tab tab,
+			FragmentTransaction fragmentTransaction) {
+	}
+
+	public class SectionsPagerAdapter extends FragmentPagerAdapter {
+
+		public SectionsPagerAdapter(FragmentManager fm) {
+			super(fm);
+		}
+
+		@Override
+		public Fragment getItem(int position) {
+
+			LayoutInflater inflater = (LayoutInflater)MainActivity.this.getSystemService
+				      (Context.LAYOUT_INFLATER_SERVICE);
+
+			rootView = LayoutInflater.from(MainActivity.this).inflate(R.layout.tabpage, null);
+			if (position == 0) {
+
+				return new MainActivity();
+			}
+			if (position == 1) {
+
+				return new ShowroomFragment();
+
+			}
+			if (position == 2) {
+
+				return new SpecialsFragment();
+
+			}
+			if (position == 3) {
+				return new ToolsFragment();
+			}
+			return PlaceholderFragment.newInstance(position + 1);
+		}
+
+		@Override
+		public int getCount() {
+			// Show 3 total pages.
+			return 5;
+		}
+
+		@Override
+		public CharSequence getPageTitle(int position) {
+			Locale l = Locale.getDefault();
+			switch (position) {
+			case 0:
+				return getString(R.string.title_garage).toUpperCase(l);
+			case 1:
+				return getString(R.string.title_showroom).toUpperCase(l);
+			case 2:
+				return getString(R.string.title_specials).toUpperCase(l);
+			case 3:
+				return getString(R.string.title_tools).toUpperCase(l);
+			case 4:
+				return getString(R.string.title_extra).toUpperCase(l);
+			}
+			return null;
+		}
+	}
+
+
+
+}

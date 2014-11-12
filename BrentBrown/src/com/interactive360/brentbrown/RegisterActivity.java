@@ -1,0 +1,49 @@
+package com.interactive360.brentbrown;
+
+import credentials.commons;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.os.Bundle;
+import android.os.Handler;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+
+public class RegisterActivity extends ActionBarActivity implements OnClickListener{
+	
+	SharedPreferences preferences;
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		 setContentView(R.layout.register);
+		 preferences = getSharedPreferences(
+					commons.shared_pref, MODE_PRIVATE);
+		   	
+		 
+	}
+
+	@Override
+	public void onClick(View v) {
+		
+		Log.v("TAg","Clicked before ");
+		
+		switch(v.getId())
+		{
+		case R.id.register:
+			Log.v("TAg","Clicked");
+			Editor editor = preferences.edit();
+			editor.putBoolean("IsAppLaunch", false);
+			editor.commit();
+			
+			Intent homeIntent = new Intent(this, HomeScreen.class);
+			startActivity(homeIntent);
+			finish();
+			break;
+		}	}
+	
+}

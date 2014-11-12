@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EAEAEA"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="#EAEAEA"
+        android:padding="3dp" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@android:color/white" >
+
+            <ImageView
+                android:id="@+id/vehicle_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/carimage" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="5dp" >
+
+        <TextView
+            android:id="@+id/vehical_nametxt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:fontFamily="sans-serif-light"
+            android:text="2015 Toyota TACOMA 4WD 4X4 DB 4x"
+            android:textColor="@color/list_item_title" />
+
+        <LinearLayout
+            android:id="@+id/displayforshowroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="SE 4dr Sedan 6A"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/list_item_subtitle" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Color : N/A "
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/list_item_subtitle" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Stock : N/A"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/list_item_subtitle" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/vmileage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Mileage : 21452 "
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/list_item_subtitle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:background="@drawable/selector_arrow_list" >
+    </LinearLayout>
+
+</LinearLayout>

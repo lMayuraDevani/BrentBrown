@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/header_black_colr"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <!-- android:background="@color/header_black_colr" -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="5dp" >
+
+        <com.sobuz.customviews.CustomTextViewMyriadproSemiBold
+            android:id="@+id/tvshow"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Show"
+            android:textColor="@xml/hover_gray"
+            android:textSize="@dimen/leftdrawer_textzize" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="5dp" >
+
+                <com.sobuz.customviews.CustomTextViewMyriadproSemiBold
+                    android:id="@+id/tvSocialNetwork"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Social Networks"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/leftdrawer_textzize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/img_menu_facebook"
+                    android:layout_width="@dimen/Rightdrawer_imagewidth"
+                    android:layout_height="@dimen/Rightdrawer_height"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/fb_setup"
+                    android:tag="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="5dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/img_menu_google"
+                    android:layout_width="@dimen/Rightdrawer_imagewidth"
+                    android:layout_height="@dimen/Rightdrawer_height"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/l_google_icon"
+                    android:tag="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:paddingBottom="5dp" >
+
+                <ImageView
+                    android:id="@+id/img_menu_twitter"
+                    android:layout_width="@dimen/Rightdrawer_imagewidth"
+                    android:layout_height="@dimen/Rightdrawer_height"
+                    android:layout_gravity="center_horizontal"
+                 android:src="@drawable/tw_off"
+                    android:tag="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:paddingBottom="5dp" >
+
+                <ImageView
+                    android:id="@+id/img_menu_linkedin"
+                    android:layout_width="@dimen/Rightdrawer_imagewidth"
+                    android:layout_height="@dimen/Rightdrawer_height"
+                    android:layout_gravity="center_horizontal"
+                        android:src="@drawable/linkedin_off"
+                    android:tag="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:paddingBottom="5dp" >
+
+                <ImageView
+                    android:id="@+id/img_menu_tumblr"
+                    android:layout_width="@dimen/Rightdrawer_imagewidth"
+                    android:layout_height="@dimen/Rightdrawer_height"
+                    android:layout_gravity="center_horizontal"
+                  android:src="@drawable/tumblr_off"
+                    android:tag="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:paddingBottom="5dp" >
+
+                <ImageView
+                    android:id="@+id/img_menu_instagram"
+                    android:layout_width="@dimen/Rightdrawer_imagewidth"
+                    android:layout_height="@dimen/Rightdrawer_height"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/instagram"
+                    android:tag="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:paddingBottom="5dp" >
+
+                <ImageView
+                    android:id="@+id/img_menu_souncloud"
+                    android:layout_width="@dimen/Rightdrawer_imagewidth"
+                    android:layout_height="@dimen/Rightdrawer_height"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/soundcloud_manage"
+                    android:tag="0" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="5dp" >
+
+                <com.sobuz.customviews.CustomTextViewMyriadproSemiBold
+                    android:id="@+id/tvNewsFeed"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="News Feeds"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/leftdrawer_textzize" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:paddingBottom="5dp" >
+
+                <ImageView
+                    android:id="@+id/img_menu_news_feeds"
+                    android:layout_width="@dimen/Rightdrawer_imagewidth"
+                    android:layout_height="@dimen/Rightdrawer_height"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/l_rss"
+                    android:tag="0" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

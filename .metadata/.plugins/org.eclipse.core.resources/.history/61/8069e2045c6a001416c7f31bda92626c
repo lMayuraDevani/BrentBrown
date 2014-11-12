@@ -1,0 +1,13 @@
+package com.interactive360.brentbrown;
+
+import com.google.android.gms.maps.MapView;
+
+import android.app.Activity;
+import android.app.Fragment;
+import android.os.Bundle;
+import android.widget.LinearLayout;
+
+public class FindMyCarActivity extends Fragment{
+
+	
+}

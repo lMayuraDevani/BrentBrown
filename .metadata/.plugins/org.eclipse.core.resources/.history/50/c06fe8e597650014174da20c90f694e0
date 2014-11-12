@@ -1,0 +1,57 @@
+package com.interactive360.brentbrown;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import com.androidsurya.customviews.PullToRefreshListView;
+import com.androidsurya.customviews.PullToRefreshListView.OnRefreshListener;
+
+import adapter.VehicleListAdapter;
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.widget.DrawerLayout;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
+
+public class ShowroomFragment extends Fragment {
+
+	PullToRefreshListView VehicleGarageList;
+	private List<String> mListItems;
+
+	@Override
+	public View onCreateView(LayoutInflater inflater, ViewGroup container,
+			Bundle savedInstanceState) {
+		// TODO Auto-generated method stub
+		// return super.onCreateView(inflater, container, savedInstanceState);
+
+		View rootView = inflater.inflate(R.layout.fragment_showroom_screen,
+				container, false);
+		
+		mListItems = new ArrayList<String>();
+		mListItems.addAll(Arrays.asList(mStrings));
+		
+		
+		VehicleGarageList= (PullToRefreshListView) rootView.findViewById(android.R.id.list); 
+		VehicleGarageList.setOnRefreshListener(new );
+
+		mListItems = new ArrayList<String>();
+		mListItems.addAll(Arrays.asList(mStrings));
+		VehicleGarageList.setAdapter(new VehicleListAdapter(getActivity().getApplicationContext(),true, mListItems));
+		
+		
+		/*VehicleGarageList = (ListView) rootView.findViewById(R.id.listVehicle);
+		VehicleGarageList.setAdapter(new VehicleListAdapter(getActivity(),
+				false, mListItems));
+		((HomeScreen)getActivity()).mSearchDrawLayout = (DrawerLayout)rootView.findViewById(R.id.drawer_layout);
+		((HomeScreen)getActivity()).mSearchDrawLayout.closeDrawers();*/
+		return rootView;
+	}
+	private String[] mStrings = { "Andaman and Nicobar Islands",
+			"Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar",
+			"Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh",
+			"Jammu and Kashmir", "Jharkhand", "Karnataka", "Kerala",
+			"Madhya Pradesh", "Maharashtra", "Manipur","1","2","3","4","5" };
+}

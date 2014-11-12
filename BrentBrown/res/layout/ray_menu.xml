@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <utility.RayLayout
+        xmlns:custom="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/item_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        custom:childSize="30dp"
+        custom:leftHolderWidth="60dp" />
+
+    <LinearLayout
+        android:id="@+id/control_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="14dp" >
+
+        <ImageView
+            android:id="@+id/control_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:src="@drawable/add" />
+    </LinearLayout>
+
+</merge>

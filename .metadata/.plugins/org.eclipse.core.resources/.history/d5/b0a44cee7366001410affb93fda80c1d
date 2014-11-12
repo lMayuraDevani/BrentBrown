@@ -1,0 +1,207 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_container"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+     	android:orientation="horizontal" >
+		        
+         <LinearLayout
+		        android:layout_width="300dp"
+		        android:layout_height="match_parent"
+		         >
+		      <com.androidsurya.customviews.PullToRefreshListView
+		        android:id="@+id/android:list"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		         />
+		   </LinearLayout>
+		       <LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:background="@color/gray_backgroound"
+		         >
+		<ScrollView 
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white" >
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/carimage_big" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/gray_backgroound"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="@drawable/selector_list_background_vehicle_detail"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Model : N/A" />
+                
+               
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="@drawable/selector_list_background_vehicle_detail"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recall : N/A" />
+                
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="@drawable/selector_list_background_vehicle_detail"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Estimate Mileage : N/A" />
+               
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="@drawable/selector_list_background_vehicle_detail"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Last Service : N/A" />
+                
+               
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="@drawable/selector_list_background_vehicle_detail"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Next Service : N/A" />
+                
+                
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:background="@drawable/selector_list_background_vehicle_detail"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pay your next Installment" />
+                
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/arrow" >
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llServiceHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:clickable="true"
+                android:background="@drawable/selector_list_background_vehicle_detail"
+                android:padding="10dp" >
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Service History" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:src="@drawable/arrow" >
+                </ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/list_background_vehicle_detail"
+                android:padding="10dp" >
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+		      
+		      </LinearLayout>
+      </LinearLayout>
+
+ <!--    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right" >
+
+        <utility.RayMenu
+            android:id="@+id/ray_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:visibility="invisible"
+            android:background="@color/gray_border">
+        </utility.RayMenu>
+    </LinearLayout> -->
+
+</FrameLayout>
