@@ -87,6 +87,8 @@ public class GarageFragment extends Fragment {
 		else if(var.containsKey("used"))
 		{
 			Log.v("TAg","used");
+			//Log.v("TAg","used");
+			
 			json = "{\"Certified\":false,\"StockType\":\"used\",\"criteria\":{\"DealerSiteID\":103,\"PageIndex\":"+pageindex+",\"PageSize\":10}}";
 		}
 		}
